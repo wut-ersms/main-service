@@ -1,0 +1,1 @@
+sudo docker exec broker opt/kafka/bin/kafka-topics.sh --bootstrap-server broker:9092 --delete --topic '.*'
