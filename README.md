@@ -6,6 +6,11 @@ https://sdkman.io/usage/
 sdk env
 ```
 
+## Run Docker
+```
+docker compose -f docker-compose-dev.yaml up
+```
+
 ## Build app
 
 ```
