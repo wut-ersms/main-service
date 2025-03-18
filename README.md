@@ -26,5 +26,5 @@ http://localhost:8080/addToTopic/alerts?message=Test
 http://localhost:8080/addToTopic/mails?message=Test
 
 ## Listen at topic
-http://localhost:8080/consumer/alerts
+http://localhost:8080/consumer/alerts  
 http://localhost:8080/consumer/mails
