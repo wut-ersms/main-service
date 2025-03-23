@@ -39,3 +39,15 @@ services:
       KAFKA_SHARE_COORDINATOR_STATE_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_SHARE_COORDINATOR_STATE_TOPIC_MIN_ISR: 1
       KAFKA_LOG_DIRS: '/tmp/kraft-combined-logs'
+
+  hazelcast:
+    image: hazelcast/hazelcast:5.5.0
+    ports:
+      - "5701:5701"
+  hazelcast-management-center:
+    image: hazelcast/management-center:5.7.0
+    ports:
+      - "5700:8080"
+    environment:
+      - MC_DEFAULT_CLUSTER=dev
+      - MC_DEFAULT_CLUSTER_MEMBERS=hazelcast
