@@ -1,5 +1,9 @@
 package com.wut.ersms.mainservice;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,11 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/consumer")
+@Tag(name = "Consumer", description = "Controller to view sample consumer")
 public class SampleConsumer {
 
     private final List<String> alertsMessages = new ArrayList<>();
     private final List<String> mailsMessages = new ArrayList<>();
 
+    @Operation(summary = "Fetch all alerts", description = "Some description")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "successful operation")
+    })
     @GetMapping("/alerts")
     public String showAlertsMessages() {
         return String.join("<br>", alertsMessages);

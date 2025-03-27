@@ -3,6 +3,7 @@ plugins {
     id("org.springframework.boot") version "3.4.3"
     id("io.spring.dependency-management") version "1.1.7"
     id("io.freefair.lombok") version "8.13"
+    id("com.bmuschko.docker-spring-boot-application") version "9.4.0"
 }
 
 group = "com.wut.ersms"
@@ -22,6 +23,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.kafka:spring-kafka")
     implementation("org.apache.kafka:kafka-clients:3.9.0")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.6")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.kafka:spring-kafka-test")
