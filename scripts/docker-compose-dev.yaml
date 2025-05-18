@@ -51,3 +51,16 @@ services:
     environment:
       - MC_DEFAULT_CLUSTER=dev
       - MC_DEFAULT_CLUSTER_MEMBERS=hazelcast
+  mongo:
+    image: mongo
+    container_name: ersms-mongodb
+    restart: unless-stopped
+    ports:
+      - '27020:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+      MONGO_INITDB_DATABASE: stock
+
+    volumes:
+      - "./data/mongo:/data/db"
