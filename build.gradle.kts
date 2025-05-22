@@ -4,6 +4,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.7"
     id("io.freefair.lombok") version "8.13"
     id("com.bmuschko.docker-spring-boot-application") version "9.4.0"
+    id("pl.allegro.tech.build.axion-release") version "1.18.18"
 }
 
 group = "com.wut.ersms"
