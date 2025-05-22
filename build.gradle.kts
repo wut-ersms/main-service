@@ -24,6 +24,7 @@ dependencies {
     implementation("org.springframework.kafka:spring-kafka")
     implementation("org.apache.kafka:kafka-clients:3.9.0")
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.6")
+    implementation("org.apache.httpcomponents.client5:httpclient5")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.kafka:spring-kafka-test")
