@@ -10,7 +10,7 @@ import java.time.OffsetDateTime;
 @Setter
 @ToString
 public class StockDataPoint {
-    @JsonProperty("Date")
+    @JsonProperty("Datetime")
     private OffsetDateTime timestamp;
     @JsonProperty("Open")
     private double open;
