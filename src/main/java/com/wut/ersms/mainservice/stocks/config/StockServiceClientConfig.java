@@ -9,7 +9,7 @@ import org.springframework.web.client.RestClient;
 @Configuration
 public class StockServiceClientConfig {
 
-    @Value("http://localhost:8000/stocks")
+    @Value("${stock.service.address}")
     private String baseUrl;
 
     @Bean("stockServiceClient")
