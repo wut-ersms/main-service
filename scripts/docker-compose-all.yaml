@@ -24,11 +24,6 @@ services:
       KAFKA_SHARE_COORDINATOR_STATE_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_SHARE_COORDINATOR_STATE_TOPIC_MIN_ISR: 1
       KAFKA_LOG_DIRS: '/tmp/kraft-combined-logs'
-#    healthcheck:
-#      test: /kafka/bin/kafka-cluster.sh cluster-id --bootstrap-server broker:19092 || exit 1
-#      interval: 15s
-#      timeout: 10s
-#      retries: 8
     healthcheck:
       test: [ "CMD", "bash", "-c", "echo > /dev/tcp/localhost/9092" ]
       interval: 10s
@@ -40,7 +35,7 @@ services:
     container_name: ersms-mongodb
     restart: unless-stopped
     ports:
-      - '27020:27017'
+      - '27017:27017'
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: admin
